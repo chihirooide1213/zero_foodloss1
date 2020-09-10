@@ -56,9 +56,9 @@ class Customers::OrdersController < ApplicationController
       current_customer.cart_items.each do |cp|
       	order_details              = @order.order_details.build
       	order_details.order_id     = @order.id
-      	order_details.product_id   = cp.item_id
-      	order_details.price        = price_include_tax(cp.item.price)
-      	order_detailss.count       = cp.count
+      	order_details.item_id      = cp.item_id
+      	order_details.price        = cp.item.price
+      	order_details.amount       = cp.amount
       	order_details.save
       	cp.destroy
       end
@@ -88,6 +88,46 @@ end
 def confirm
 	@order = Order.new
 	@cart_items = current_customer.cart_items.all
+	@order.payment_method = params[:order][:payment_method]
+
+    # 合計金額を求める
+    sum_all = 0
+    @cart_items.each do |cp|
+      sum_item = cp.item.price.to_i * cp.amount
+      sum_all += sum_item
+    end
+    @order.total_payment = sum_all + @order.shipping_cost
+
+    # どのラジオボタンを押したかを数字で渡す
+    @add = params[:order][:add].to_i
+    case @add
+      # 自分の住所
+    when 1
+      @order.postal_code   = @customer.postal_code
+      @order.address       = @customer.address
+      @order.name          = @customer.last_name + @customer.first_name
+     # 登録済住所
+    when 2
+    @sta = params[:order][:address].to_i
+      if @sta == 0
+        render "new"
+      elsif
+        @address = Address.find(@sta)
+        @order.postal_code     = @address.postal_code
+        @order.address         = @address.address
+        @order.name            = @address.destination
+     end
+
+     # 入力された新しい住所
+    when 3
+    if params[:order][:new_add][:postal_code].blank? || params[:order][:new_add][:address].blank? || params[:order][:new_add][:destination].blank?
+      render :new
+    else
+      @order.postal_code        = params[:order][:new_add][:postal_code]
+      @order.address            = params[:order][:new_add][:address]
+      @order.name               = params[:order][:new_add][:destination]
+    end
+   end
 end
 
 private

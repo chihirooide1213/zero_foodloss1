@@ -9501,3 +9501,795 @@ TypeError (nil can't be coerced into Integer):
   
 app/controllers/customers/orders_controller.rb:22:in `+'
 app/controllers/customers/orders_controller.rb:22:in `create'
+app/controllers/customers/orders_controller.rb:22:in `+'
+app/controllers/customers/orders_controller.rb:22:in `create'
+id", 1], ["LIMIT", 1]]
+d", 1]]
+ 1], ["LIMIT", 1]]
+"LIMIT", 1]]
+code"=>"", "address"=>"", "name"=>"", "payment_method"=>"", "add"=>""}, "commit"=>"購入を確定する"}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    � app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 19.2ms)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/controllers/customers/orders_controller.rb:22:in `+'
+app/controllers/customers/orders_controller.rb:22:in `create'
+Started POST "/customers/orders" for 10.0.2.2 at 2020-09-09 11:04:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HgMxyyAmXiLG6OT1eDfvABwgpzaH3kJW2RK+EB68/XDFbBD5eCCZavTFNeOH6n1fF8sv8D0gt8q6DTD5JatBtQ==", "order"=>{"customer_id"=>"1", "postal_code"=>"", "address"=>"", "name"=>"", "payment_method"=>"", "add"=>""}, "commit"=>"購入を確定する"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCartItem Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:9
+Unpermitted parameters: :customer_id, :add
+  [1m[36mCartItem Load (0.6ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:18
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 12.2ms)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/controllers/customers/orders_controller.rb:22:in `+'
+app/controllers/customers/orders_controller.rb:22:in `create'
+Started POST "/customers/orders" for 10.0.2.2 at 2020-09-09 11:05:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HgMxyyAmXiLG6OT1eDfvABwgpzaH3kJW2RK+EB68/XDFbBD5eCCZavTFNeOH6n1fF8sv8D0gt8q6DTD5JatBtQ==", "order"=>{"customer_id"=>"1", "postal_code"=>"", "address"=>"", "name"=>"", "payment_method"=>"", "add"=>""}, "commit"=>"購入を確定する"}
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCartItem Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:9
+Unpermitted parameters: :customer_id, :add
+  [1m[36mCartItem Load (0.9ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:18
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 18.9ms)
+
+
+  
+NoMethodError (undefined method `to_i=' for nil:NilClass):
+  
+app/controllers/customers/orders_controller.rb:22:in `create'
+Started POST "/customers/orders" for 10.0.2.2 at 2020-09-09 11:19:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HgMxyyAmXiLG6OT1eDfvABwgpzaH3kJW2RK+EB68/XDFbBD5eCCZavTFNeOH6n1fF8sv8D0gt8q6DTD5JatBtQ==", "order"=>{"customer_id"=>"1", "postal_code"=>"", "address"=>"", "name"=>"", "payment_method"=>"", "add"=>""}, "commit"=>"購入を確定する"}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCartItem Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:9
+Unpermitted parameters: :customer_id, :add
+  [1m[36mCartItem Load (0.6ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:18
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+Completed 500 Internal Server Error in 202ms (ActiveRecord: 23.1ms)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/controllers/customers/orders_controller.rb:22:in `+'
+app/controllers/customers/orders_controller.rb:22:in `create'
+Started GET "/customers/orders/confirm?utf8=%E2%9C%93&order%5Bpayment_method%5D=1&order%5Badd%5D=1&order%5Bnew_add%5D%5Bpostal_code%5D=&order%5Bnew_add%5D%5Baddress%5D=&order%5Bnew_add%5D%5Bdestination%5D=&commit=%E7%A2%BA%E8%AA%8D%E7%94%BB%E9%9D%A2%E3%81%B8%E9%80%B2%E3%82%80" for 10.0.2.2 at 2020-09-09 11:20:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "order"=>{"payment_method"=>"1", "add"=>"1", "new_add"=>{"postal_code"=>"", "address"=>"", "destination"=>""}}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  Rendering customers/orders/confirm.html.erb within layouts/application
+  [1m[36mCartItem Load (0.5ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/views/customers/orders/confirm.html.erb:22
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/orders/confirm.html.erb:25
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/orders/confirm.html.erb:25
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/orders/confirm.html.erb:25
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/orders/confirm.html.erb:25
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/orders/confirm.html.erb:25
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customers/orders/confirm.html.erb:25
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customers/orders/confirm.html.erb:25
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/customers/orders/confirm.html.erb:25
+  Rendered customers/orders/confirm.html.erb within layouts/application (54.4ms)
+Completed 200 OK in 1513ms (Views: 1499.4ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/customers/orders" for 10.0.2.2 at 2020-09-09 11:20:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wyoXCl40q2/Jf3lzNYhMw09AcbWWXxPk/lmJWp8YzooY4lucX4V5Y0ILPMzC7NsBtaJAGynidPw5ujMUWvf/w==", "order"=>{"customer_id"=>"1", "postal_code"=>"", "address"=>"", "name"=>"", "payment_method"=>"", "add"=>""}, "commit"=>"購入を確定する"}
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCartItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:9
+Unpermitted parameters: :customer_id, :add
+  [1m[36mCartItem Load (0.9ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:18
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 3.6ms)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/controllers/customers/orders_controller.rb:22:in `+'
+app/controllers/customers/orders_controller.rb:22:in `create'
+Started GET "/customers/orders/confirm?utf8=%E2%9C%93&order%5Bpayment_method%5D=2&order%5Badd%5D=1&order%5Bnew_add%5D%5Bpostal_code%5D=&order%5Bnew_add%5D%5Baddress%5D=&order%5Bnew_add%5D%5Bdestination%5D=&commit=%E7%A2%BA%E8%AA%8D%E7%94%BB%E9%9D%A2%E3%81%B8%E9%80%B2%E3%82%80" for 10.0.2.2 at 2020-09-09 11:34:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/vagrant/work/zero_foodloss1/app/controllers/customers/orders_controller.rb:96: syntax error, unexpected ')', expecting keyword_end
+      sum_item = cp.item.price).to_i * cp.amount
+                              ^
+/home/vagrant/work/zero_foodloss1/app/controllers/customers/orders_controller.rb:142: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/customers/orders_controller.rb:96: syntax error, unexpected ')', expecting keyword_end
+app/controllers/customers/orders_controller.rb:142: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/customers/orders/confirm?utf8=%E2%9C%93&order%5Bpayment_method%5D=2&order%5Badd%5D=1&order%5Bnew_add%5D%5Bpostal_code%5D=&order%5Bnew_add%5D%5Baddress%5D=&order%5Bnew_add%5D%5Bdestination%5D=&commit=%E7%A2%BA%E8%AA%8D%E7%94%BB%E9%9D%A2%E3%81%B8%E9%80%B2%E3%82%80" for 10.0.2.2 at 2020-09-09 11:35:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "order"=>{"payment_method"=>"2", "add"=>"1", "new_add"=>{"postal_code"=>"", "address"=>"", "destination"=>""}}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:136
+  [1m[36mCartItem Load (0.7ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:95
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+Completed 500 Internal Server Error in 573ms (ActiveRecord: 14.8ms)
+
+
+  
+NameError (undefined local variable or method `sum_product' for #<Customers::OrdersController:0x00000000053a9fd0>):
+  
+app/controllers/customers/orders_controller.rb:97:in `block in confirm'
+app/controllers/customers/orders_controller.rb:95:in `confirm'
+Started GET "/customers/orders/confirm?utf8=%E2%9C%93&order%5Bpayment_method%5D=2&order%5Badd%5D=1&order%5Bnew_add%5D%5Bpostal_code%5D=&order%5Bnew_add%5D%5Baddress%5D=&order%5Bnew_add%5D%5Bdestination%5D=&commit=%E7%A2%BA%E8%AA%8D%E7%94%BB%E9%9D%A2%E3%81%B8%E9%80%B2%E3%82%80" for 10.0.2.2 at 2020-09-09 11:37:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "order"=>{"payment_method"=>"2", "add"=>"1", "new_add"=>{"postal_code"=>"", "address"=>"", "destination"=>""}}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:136
+  [1m[36mCartItem Load (0.6ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:95
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 15.3ms)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/controllers/customers/orders_controller.rb:99:in `+'
+app/controllers/customers/orders_controller.rb:99:in `confirm'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddDefaultToOrders (20200909115134)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200909115134_add_default_to_orders.rb:3
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "customer_id" integer DEFAULT NULL, "postal_code" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "name" varchar DEFAULT NULL, "shipping_cost" integer DEFAULT NULL, "total_payment" integer DEFAULT NULL, "payment_method" integer DEFAULT NULL, "status" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200909115134_add_default_to_orders.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aorders" ("id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at")
+                     SELECT "id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at" FROM "orders"[0m
+  ↳ db/migrate/20200909115134_add_default_to_orders.rb:3
+  [1m[35m (3.2ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  ↳ db/migrate/20200909115134_add_default_to_orders.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "customer_id" integer DEFAULT NULL, "postal_code" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "name" varchar DEFAULT NULL, "shipping_cost" integer DEFAULT NULL, "total_payment" integer DEFAULT NULL, "payment_method" integer DEFAULT NULL, "status" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200909115134_add_default_to_orders.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at")
+                     SELECT "id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at" FROM "aorders"[0m
+  ↳ db/migrate/20200909115134_add_default_to_orders.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  ↳ db/migrate/20200909115134_add_default_to_orders.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "customer_id" integer DEFAULT NULL, "postal_code" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "name" varchar DEFAULT NULL, "shipping_cost" integer DEFAULT NULL, "total_payment" integer DEFAULT NULL, "payment_method" integer DEFAULT NULL, "status" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200909115134_add_default_to_orders.rb:4
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at")
+                     SELECT "id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at" FROM "orders"[0m
+  ↳ db/migrate/20200909115134_add_default_to_orders.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  ↳ db/migrate/20200909115134_add_default_to_orders.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "customer_id" integer DEFAULT NULL, "postal_code" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "name" varchar DEFAULT NULL, "shipping_cost" integer DEFAULT NULL, "total_payment" integer DEFAULT NULL, "payment_method" integer DEFAULT NULL, "status" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200909115134_add_default_to_orders.rb:4
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at")
+                     SELECT "id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at" FROM "aorders"[0m
+  ↳ db/migrate/20200909115134_add_default_to_orders.rb:4
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  ↳ db/migrate/20200909115134_add_default_to_orders.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200909115134"]]
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/customers/orders/confirm?utf8=%E2%9C%93&order%5Bpayment_method%5D=2&order%5Badd%5D=1&order%5Bnew_add%5D%5Bpostal_code%5D=&order%5Bnew_add%5D%5Baddress%5D=&order%5Bnew_add%5D%5Bdestination%5D=&commit=%E7%A2%BA%E8%AA%8D%E7%94%BB%E9%9D%A2%E3%81%B8%E9%80%B2%E3%82%80" for 10.0.2.2 at 2020-09-09 12:08:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "order"=>{"payment_method"=>"2", "add"=>"1", "new_add"=>{"postal_code"=>"", "address"=>"", "destination"=>""}}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:136
+  [1m[36mCartItem Load (0.6ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:95
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 18.0ms)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/controllers/customers/orders_controller.rb:99:in `+'
+app/controllers/customers/orders_controller.rb:99:in `confirm'
+Started GET "/customers/orders/confirm?utf8=%E2%9C%93&order%5Bpayment_method%5D=2&order%5Badd%5D=1&order%5Bnew_add%5D%5Bpostal_code%5D=&order%5Bnew_add%5D%5Baddress%5D=&order%5Bnew_add%5D%5Bdestination%5D=&commit=%E7%A2%BA%E8%AA%8D%E7%94%BB%E9%9D%A2%E3%81%B8%E9%80%B2%E3%82%80" for 10.0.2.2 at 2020-09-09 12:09:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "order"=>{"payment_method"=>"2", "add"=>"1", "new_add"=>{"postal_code"=>"", "address"=>"", "destination"=>""}}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (1.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:136
+  [1m[36mCartItem Load (0.6ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:95
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 15.5ms)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/controllers/customers/orders_controller.rb:99:in `+'
+app/controllers/customers/orders_controller.rb:99:in `confirm'
+Started GET "/customers/orders/confirm?utf8=%E2%9C%93&order%5Bpayment_method%5D=2&order%5Badd%5D=1&order%5Bnew_add%5D%5Bpostal_code%5D=&order%5Bnew_add%5D%5Baddress%5D=&order%5Bnew_add%5D%5Bdestination%5D=&commit=%E7%A2%BA%E8%AA%8D%E7%94%BB%E9%9D%A2%E3%81%B8%E9%80%B2%E3%82%80" for 10.0.2.2 at 2020-09-09 12:19:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "order"=>{"payment_method"=>"2", "add"=>"1", "new_add"=>{"postal_code"=>"", "address"=>"", "destination"=>""}}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:137
+  [1m[36mCartItem Load (1.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+Completed 500 Internal Server Error in 585820ms (ActiveRecord: 13.6ms)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/controllers/customers/orders_controller.rb:100:in `+'
+app/controllers/customers/orders_controller.rb:100:in `confirm'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/bin/rake:23
+Migrating to AddDefaultToOrders (20200909115134)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/bin/rake:23
+Migrating to AddDefaultToOrders (20200909115134)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnToOrder (20200909124046)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnToOrder (20200909124046)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnToOrder (20200909124046)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnToOrder (20200909124046)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnToOrder (20200909124046)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnToOrder (20200909124046)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200909124046_change_column_to_order.rb:4
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "customer_id" integer DEFAULT NULL, "postal_code" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "name" varchar DEFAULT NULL, "shipping_cost" integer DEFAULT NULL, "total_payment" integer DEFAULT NULL, "payment_method" integer DEFAULT NULL, "status" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200909124046_change_column_to_order.rb:4
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aorders" ("id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at")
+                     SELECT "id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at" FROM "orders"[0m
+  ↳ db/migrate/20200909124046_change_column_to_order.rb:4
+  [1m[35m (2.7ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  ↳ db/migrate/20200909124046_change_column_to_order.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "customer_id" integer DEFAULT NULL, "postal_code" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "name" varchar DEFAULT NULL, "shipping_cost" integer DEFAULT 800, "total_payment" integer DEFAULT NULL, "payment_method" integer DEFAULT NULL, "status" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200909124046_change_column_to_order.rb:4
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at")
+                     SELECT "id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at" FROM "aorders"[0m
+  ↳ db/migrate/20200909124046_change_column_to_order.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  ↳ db/migrate/20200909124046_change_column_to_order.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "customer_id" integer DEFAULT NULL, "postal_code" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "name" varchar DEFAULT NULL, "shipping_cost" integer DEFAULT 800, "total_payment" integer DEFAULT NULL, "payment_method" integer DEFAULT NULL, "status" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200909124046_change_column_to_order.rb:5
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at")
+                     SELECT "id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at" FROM "orders"[0m
+  ↳ db/migrate/20200909124046_change_column_to_order.rb:5
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  ↳ db/migrate/20200909124046_change_column_to_order.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "customer_id" integer DEFAULT NULL, "postal_code" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "name" varchar DEFAULT NULL, "shipping_cost" integer DEFAULT 800, "total_payment" integer DEFAULT NULL, "payment_method" integer DEFAULT NULL, "status" integer DEFAULT 1, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200909124046_change_column_to_order.rb:5
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at")
+                     SELECT "id","customer_id","postal_code","address","name","shipping_cost","total_payment","payment_method","status","created_at","updated_at" FROM "aorders"[0m
+  ↳ db/migrate/20200909124046_change_column_to_order.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  ↳ db/migrate/20200909124046_change_column_to_order.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200909124046"]]
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/customers/orders/confirm?utf8=%E2%9C%93&order%5Bpayment_method%5D=2&order%5Badd%5D=1&order%5Bnew_add%5D%5Bpostal_code%5D=&order%5Bnew_add%5D%5Baddress%5D=&order%5Bnew_add%5D%5Bdestination%5D=&commit=%E7%A2%BA%E8%AA%8D%E7%94%BB%E9%9D%A2%E3%81%B8%E9%80%B2%E3%82%80" for 10.0.2.2 at 2020-09-09 13:04:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "order"=>{"payment_method"=>"2", "add"=>"1", "new_add"=>{"postal_code"=>"", "address"=>"", "destination"=>""}}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:137
+  [1m[36mCartItem Load (0.5ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:97
+  Rendering customers/orders/confirm.html.erb within layouts/application
+  Rendered customers/orders/confirm.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 30248ms (Views: 1126.7ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/customers/orders/confirm?utf8=%E2%9C%93&order%5Bpayment_method%5D=2&order%5Badd%5D=1&order%5Bnew_add%5D%5Bpostal_code%5D=&order%5Bnew_add%5D%5Baddress%5D=&order%5Bnew_add%5D%5Bdestination%5D=&commit=%E7%A2%BA%E8%AA%8D%E7%94%BB%E9%9D%A2%E3%81%B8%E9%80%B2%E3%82%80" for 10.0.2.2 at 2020-09-09 13:05:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "order"=>{"payment_method"=>"2", "add"=>"1", "new_add"=>{"postal_code"=>"", "address"=>"", "destination"=>""}}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:136
+  [1m[36mCartItem Load (0.9ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:95
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:96
+  Rendering customers/orders/confirm.html.erb within layouts/application
+  Rendered customers/orders/confirm.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 840ms (Views: 675.2ms | ActiveRecord: 12.1ms)
+
+
+Started POST "/customers/orders" for 10.0.2.2 at 2020-09-09 13:05:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PCI1U3auRxWP5MyKh2fwTbwCNRns1TaTkknwQEGUIWnnTRRhLqiAXb3JHZx4umISt+m931Yrww/xVn6peoOdrA==", "order"=>{"customer_id"=>"1", "postal_code"=>"6610033", "address"=>"南武庫之荘", "name"=>"大出千緋呂", "payment_method"=>"2", "add"=>"1"}, "commit"=>"購入を確定する"}
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:136
+  [1m[36mCartItem Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:9
+Unpermitted parameters: :customer_id, :add
+  [1m[36mCartItem Load (0.9ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:18
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:50
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:50
+  [1m[36mOrder Create (6.4ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "postal_code", "address", "name", "total_payment", "payment_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["customer_id", 1], ["postal_code", "6610033"], ["address", "南武庫之荘"], ["name", "大出千緋呂"], ["total_payment", 5900], ["payment_method", 2], ["created_at", "2020-09-09 13:05:54.005835"], ["updated_at", "2020-09-09 13:05:54.005835"]]
+  ↳ app/controllers/customers/orders_controller.rb:50
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:50
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 16.9ms)
+
+
+  
+NoMethodError (undefined method `order_details' for #<Order:0x0000000004657fa8>):
+  
+app/controllers/customers/orders_controller.rb:57:in `block in create'
+app/controllers/customers/orders_controller.rb:56:in `create'
+Started POST "/customers/orders" for 10.0.2.2 at 2020-09-09 13:14:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PCI1U3auRxWP5MyKh2fwTbwCNRns1TaTkknwQEGUIWnnTRRhLqiAXb3JHZx4umISt+m931Yrww/xVn6peoOdrA==", "order"=>{"customer_id"=>"1", "postal_code"=>"6610033", "address"=>"南武庫之荘", "name"=>"大出千緋呂", "payment_method"=>"2", "add"=>"1"}, "commit"=>"購入を確定する"}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:136
+  [1m[36mCartItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:9
+Unpermitted parameters: :customer_id, :add
+  [1m[36mCartItem Load (0.6ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:18
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:50
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:50
+  [1m[36mOrder Create (3.2ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "postal_code", "address", "name", "total_payment", "payment_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["customer_id", 1], ["postal_code", "6610033"], ["address", "南武庫之荘"], ["name", "大出千緋呂"], ["total_payment", 5900], ["payment_method", 2], ["created_at", "2020-09-09 13:14:32.256062"], ["updated_at", "2020-09-09 13:14:32.256062"]]
+  ↳ app/controllers/customers/orders_controller.rb:50
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:50
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 20.4ms)
+
+
+  
+NoMethodError (undefined method `product_id=' for #<OrderDetail:0x0000000004223a90>):
+  
+app/controllers/customers/orders_controller.rb:59:in `block in create'
+app/controllers/customers/orders_controller.rb:56:in `create'
+Started POST "/customers/orders" for 10.0.2.2 at 2020-09-09 13:16:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PCI1U3auRxWP5MyKh2fwTbwCNRns1TaTkknwQEGUIWnnTRRhLqiAXb3JHZx4umISt+m931Yrww/xVn6peoOdrA==", "order"=>{"customer_id"=>"1", "postal_code"=>"6610033", "address"=>"南武庫之荘", "name"=>"大出千緋呂", "payment_method"=>"2", "add"=>"1"}, "commit"=>"購入を確定する"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:136
+  [1m[36mCartItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cart_items" WHERE "cart_items"."customer_id" = ? LIMIT ?[0m  [["customer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:9
+Unpermitted parameters: :customer_id, :add
+  [1m[36mCartItem Load (0.8ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:18
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:50
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:50
+  [1m[36mOrder Create (2.5ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "postal_code", "address", "name", "total_payment", "payment_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["customer_id", 1], ["postal_code", "6610033"], ["address", "南武庫之荘"], ["name", "大出千緋呂"], ["total_payment", 5900], ["payment_method", 2], ["created_at", "2020-09-09 13:16:47.534126"], ["updated_at", "2020-09-09 13:16:47.534126"]]
+  ↳ app/controllers/customers/orders_controller.rb:50
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[36mOrderDetail Create (3.7ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 3], ["item_id", 1], ["price", 300], ["amount", 2], ["created_at", "2020-09-09 13:16:47.567852"], ["updated_at", "2020-09-09 13:16:47.567852"]]
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[36mCartItem Destroy (2.1ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[36mOrderDetail Create (2.2ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 3], ["item_id", 1], ["price", 300], ["amount", 2], ["created_at", "2020-09-09 13:16:47.594851"], ["updated_at", "2020-09-09 13:16:47.594851"]]
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[36mCartItem Destroy (3.4ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[36mOrderDetail Create (3.6ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 3], ["item_id", 1], ["price", 300], ["amount", 3], ["created_at", "2020-09-09 13:16:47.626429"], ["updated_at", "2020-09-09 13:16:47.626429"]]
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[36mCartItem Destroy (5.0ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[36mOrderDetail Create (2.7ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 3], ["item_id", 1], ["price", 300], ["amount", 3], ["created_at", "2020-09-09 13:16:47.673160"], ["updated_at", "2020-09-09 13:16:47.673160"]]
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[36mCartItem Destroy (3.6ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[36mOrderDetail Create (5.0ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 3], ["item_id", 1], ["price", 300], ["amount", 3], ["created_at", "2020-09-09 13:16:47.704502"], ["updated_at", "2020-09-09 13:16:47.704502"]]
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[36mCartItem Destroy (2.8ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[36mOrderDetail Create (6.5ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 3], ["item_id", 2], ["price", 300], ["amount", 1], ["created_at", "2020-09-09 13:16:47.734350"], ["updated_at", "2020-09-09 13:16:47.734350"]]
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[36mCartItem Destroy (5.5ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[36mOrderDetail Create (3.1ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 3], ["item_id", 2], ["price", 300], ["amount", 1], ["created_at", "2020-09-09 13:16:47.773696"], ["updated_at", "2020-09-09 13:16:47.773696"]]
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[36mCartItem Destroy (4.4ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[36mOrderDetail Create (4.9ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 3], ["item_id", 1], ["price", 300], ["amount", 2], ["created_at", "2020-09-09 13:16:47.799517"], ["updated_at", "2020-09-09 13:16:47.799517"]]
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:62
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[36mCartItem Destroy (4.3ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/customers/orders_controller.rb:63
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers/orders_controller.rb:63
+  Rendering customers/orders/thanks.html.erb within layouts/application
+  Rendered customers/orders/thanks.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 1363ms (Views: 913.5ms | ActiveRecord: 135.0ms)
+
+
+Started GET "/customers/orders/confirm?utf8=%E2%9C%93&order%5Bpayment_method%5D=2&order%5Badd%5D=1&order%5Bnew_add%5D%5Bpostal_code%5D=&order%5Bnew_add%5D%5Baddress%5D=&order%5Bnew_add%5D%5Bdestination%5D=&commit=%E7%A2%BA%E8%AA%8D%E7%94%BB%E9%9D%A2%E3%81%B8%E9%80%B2%E3%82%80" for 10.0.2.2 at 2020-09-10 03:44:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Customers::OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "order"=>{"payment_method"=>"2", "add"=>"1", "new_add"=>{"postal_code"=>"", "address"=>"", "destination"=>""}}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:136
+  [1m[36mCartItem Load (0.5ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers/orders_controller.rb:95
+  Rendering customers/orders/confirm.html.erb within layouts/application
+  Rendered customers/orders/confirm.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 1025ms (Views: 893.5ms | ActiveRecord: 13.0ms)
+
+
