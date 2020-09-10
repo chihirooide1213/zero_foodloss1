@@ -36,8 +36,8 @@
       <h4>請求情報</h4>
 
       <% sum_all = 0 %>
-      <% @order.order_products.each do |op| %>
-        <% sub_total = price_include_tax(op.price).to_i * op.count %>
+      <% @order.order_details.each do |od| %>
+        <% sub_total = price_include_tax(od.price).to_i * od.amount %>
         <% sum_all += sub_total %>
       <% end %>
 
@@ -49,11 +49,11 @@
           </tr>
           <tr>
             <th><strong>配送料</strong></th>
-            <th><%= @order.postage %>円</th>
+            <th><%= @order.shipping_cost %>円</th>
           </tr>
           <tr>
             <th><strong>御請求額</strong></th>
-            <th><%= sum_all + @order.postage.to_i %>円</th>
+            <th><%= sum_all + @order.shipping_cost.to_i %>円</th>
           </tr>
         </tbody>
       </table>
@@ -74,13 +74,13 @@
         </thead>
         <tbody>
           <% sum_all = 0 %>
-          <% @order.order_products.each do |op| %>
+          <% @order.order_details.each do |od| %>
           <tr>
-            <td><%= op.product.name %></td>
-            <td><%= price_include_tax(op.price) %></td>
-            <td><%= op.count %></td>
+            <td><%= od.item.name %></td>
+            <td><%= price_include_tax(od.price) %></td>
+            <td><%= od.amount %></td>
             <td>
-              <strong><%= sub_total = price_include_tax(op.price).to_i * op.count %>円</strong>
+              <strong><%= sub_total = price_include_tax(od.price).to_i * od.amount %>円</strong>
               <% sum_all += sub_total %>
             </td>
           </tr>

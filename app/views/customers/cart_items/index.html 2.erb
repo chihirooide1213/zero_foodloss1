@@ -1,0 +1,16 @@
+<div class="container">
+
+			<h3>ショッピングカート</h3>
+			<div class="cart-btn">
+				<%= link_to 'カートを空にする', customers_cart_items_destroy_all_path, method: :delete, class: 'btn btn-danger' %>
+			</div>
+
+			<div class="cart_render">
+				<%= render "customers/cart_items/cart_render", cart_items: @cart_items %>
+			</div>
+<div class="link_box">
+<%= link_to "注文に進む", customers_orders_new_path %>
+<%= link_to "買い物を続ける", customers_items_path %>
+</div>
+
+</div>
