@@ -36,11 +36,11 @@
             <%= order.name %>
           </th>
           <th>
-            <% order.order_items.each do |op| %>
-              <%= op.product.name %> <br>
+            <% order.order_details.each do |od| %>
+              <%= od.item.name %> <br>
             <% end %>
           </th>
-          <th><%= order.total_bill %>円</th>
+          <th><%= order.total_payment %>円</th>
           <th>
             <% if order.status == 1 %>
               <p class="alert alert-danger">入金待ち</p>
@@ -55,7 +55,7 @@
             <% end %>
           </th>
           <th>
-            <%= link_to "表示する", customer_order_path(order), class: "btn btn-sm btn-info" %>
+            <%= link_to "表示する", customers_order_path(order), class: "btn btn-sm btn-info" %>
           </th>
         </tr>
         <% end %>

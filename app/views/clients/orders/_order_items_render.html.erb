@@ -1,0 +1,29 @@
+<table class="table table-hover table-inverse">
+        <thead class="thead-light">
+            <tr>
+                <th>商品名</th>
+                <th>単価(税込)</th>
+                <th>数量</th>
+                <th>小計</th>
+                <th>制作ステータス</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% order_details.each do |order_detail| %>
+            <% @item = Item.find(order_detail.item_id) %>
+            <tr>
+                <td><%= @item.name %></td>
+                <td><%= order_detail.price %></td>
+                <td><%= order_detail.amount %></td>
+                <td><%= order_detail.price * order_detail.amount %></td>
+                <td>
+                    <%= form_with model: order_detail, url: client_order_order_detail_path(order_detail.order_id, order_detail) do |f| %>
+                        <%= f.select :making_status , [["着手不可",1],["制作待ち",2],["制作中",3],["制作完了",4]] %>
+                        <%= f.submit "更新", disable_with: 'Submiting...', class: "btn btn-sm btn-success" %>
+                    <% end %>
+                </td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>

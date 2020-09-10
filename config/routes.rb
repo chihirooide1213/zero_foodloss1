@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-  namespace :clients do
-    get 'order_details/index'
-  end
 	devise_for :admins, controllers: {
         sessions:      'admins/sessions',
         passwords:     'admins/passwords',
@@ -35,17 +32,18 @@ Rails.application.routes.draw do
     get 'items/new'
     get 'items/top'
     resources :items, only: [:create,:show,:update,:edit]
-    get 'orders/index'
-    get 'orders/show'
+    resources :orders,only: [:index, :show]
     get 'cart_items/index'
+    get 'order_details/index'
+    get 'customers/index'
   end
 
   namespace :customers do
     resources :cart_items, only: [:index, :create, :destroy, :update]
     delete 'cart_items/destroy_all'
-    resources :items, only: [:index, :show]
-    resources :orders, only: [:new, :index, :create]
     get 'orders/confirm'
+    resources :items, only: [:index, :show]
+    resources :orders, only: [:new, :index, :create, :show]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
