@@ -1,38 +1,40 @@
+<div class="container">
 <h1>商品詳細</h1>
 
-<table class="table">
-	<tbody>
-			<tr>
-				<th>商品名</th>
-			    <th><%= @item.name %></th>
-			</tr>
-	        <tr>
-	        	<th>価格</th>
-				<th><%= @item.price %></th>
-			</tr>
-			<tr>
-				<th>商品説明</th>
-				<th><%= @item.introduction %></th>
-			</tr>
-			<tr>
-				<th>商品画像</th>
-				<th><%= attachment_image_tag @item,:item_image, format: "jpeg" %></th>
-			</tr>
-			<tr>
-				<th>ジャンル名</th>
-				<th><%= @genre.name %></th>
-			</tr>
-			<tr>
-				<th>販売ステータス</th>
-				<th><%= @item_status %></th>
-			</tr>
-	</tbody>
+	<table class="table">
+		<tbody>
+				<tr>
+					<th>商品名</th>
+				    <th><%= @item.name %></th>
+				</tr>
+		        <tr>
+		        	<th>価格</th>
+					<th><%= @item.price %></th>
+				</tr>
+				<tr>
+					<th>商品説明</th>
+					<th><%= @item.introduction %></th>
+				</tr>
+				<tr>
+					<th>商品画像</th>
+					<th><%= attachment_image_tag @item,:item_image, format: "jpeg" %></th>
+				</tr>
+				<tr>
+					<th>ジャンル名</th>
+					<th><%= @genre.name %></th>
+				</tr>
+				<tr>
+					<th>販売ステータス</th>
+					<th><%= @item_status %></th>
+				</tr>
+		</tbody>
 	</table>
-<%= form_with model: @cart_items, url: customers_cart_items_path, local: true do |f| %>
-<%= f.hidden_field :item_id, :value => @item.id %>
-<div class="select">
-	<%= f.select :amount,(1..9), {prompt: "個数選択"} %>
+
+	<%= form_with model: @cart_items, url: customers_cart_items_path, local: true do |f| %>
+		<%= f.hidden_field :item_id, :value => @item.id %>
+		<div class="select">
+			<%= f.select :amount,(1..9), {prompt: "個数選択"} %>
+		</div>
+		<%= f.submit "カートに追加する" %>
+	<% end %>
 </div>
-<%= f.submit "カートに追加する" %>
-<% end %>
-<p>Find me in app/views/customers/items/show.html.erb</p>
