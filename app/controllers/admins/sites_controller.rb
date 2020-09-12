@@ -17,6 +17,7 @@ class Admins::SitesController < ApplicationController
 
   def top
   	@items = Item.all
+  	@genres = Genre.all
   end
 
   private
@@ -24,4 +25,8 @@ class Admins::SitesController < ApplicationController
     def item_params
         params.require(:item).permit(:name, :item_image, :introduction, :genre_id, :price, :is_active)
     end
+
+    # def genre_params
+    # 	params.require(:genre).permit(:name)
+    # end
 end
