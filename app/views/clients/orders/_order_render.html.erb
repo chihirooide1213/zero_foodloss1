@@ -26,7 +26,7 @@
             <td>注文ステータス</td>
             <td>
                 <%= form_with model: order, url: clients_order_path(order) do |f| %>
-                    <%= f.select :status , [["入金待ち",1],["入金確認",2],["制作中",3],["発送準備中",4],["発送完了",5]] %>
+                    <%= f.select :status , [["入金待ち",1],["入金確認",2],["発送準備中",3],["発送完了",4]] %>
                     <%= f.submit "更新", disable_with: 'Submiting...', class: "btn btn-sm btn-success" %>
                 <% end %>
             </td>

@@ -17,12 +17,7 @@
                 <td><%= order_detail.price %></td>
                 <td><%= order_detail.amount %></td>
                 <td><%= order_detail.price * order_detail.amount %></td>
-                <td>
-                    <%= form_with model: order_detail, url: client_order_order_detail_path(order_detail.order_id, order_detail) do |f| %>
-                        <%= f.select :making_status , [["着手不可",1],["制作待ち",2],["制作中",3],["制作完了",4]] %>
-                        <%= f.submit "更新", disable_with: 'Submiting...', class: "btn btn-sm btn-success" %>
-                    <% end %>
-                </td>
+               
             </tr>
             <% end %>
         </tbody>

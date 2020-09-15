@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_09_124046) do
+ActiveRecord::Schema.define(version: 2020_09_13_080458) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer "customer_id"
@@ -136,6 +136,9 @@ ActiveRecord::Schema.define(version: 2020_09_09_124046) do
     t.float "rate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "content"
+    t.string "title"
+    t.integer "order_detail_id"
   end
 
   create_table "sites", force: :cascade do |t|

@@ -3,16 +3,16 @@ class ApplicationController < ActionController::Base
   # prepend_before_filter :require_no_authentication, :only => [ :cancel]
 
   def after_sign_up_path_for(resource)
-    redirect_to clients_items_top_path
+    redirect_to admins_sites_top_path
   end
 
 
   def after_sign_in_path_for(resource)
     case resource
       when Client
-        clients_items_index_path
+        clients_items_top_path
       when Customer
-      custmoers_items_index_path(genre_sort: 0)
+      customers_customer_index_path(genre_sort: 0)
     end
   end
 
@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
     if resource == :client
       new_client_session_path
     else
-      clients_items_index_path
+      admins_sites_top_path
     end
   end
 

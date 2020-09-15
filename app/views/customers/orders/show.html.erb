@@ -70,6 +70,7 @@
             <th>単価（税込）</th>
             <th>個数</th>
             <th>小計</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -83,6 +84,8 @@
               <strong><%= sub_total = price_include_tax(od.price).to_i * od.amount %>円</strong>
               <% sum_all += sub_total %>
             </td>
+            <td>
+              <%= link_to "口コミを書く", customers_new_path(od.item.id) %></td>
           </tr>
           <% end %>
         </tbody>
