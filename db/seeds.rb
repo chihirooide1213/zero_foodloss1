@@ -27,4 +27,21 @@ genres = Genre.create!([
 {
 	name: '加工品'
 },
+{
+	name: 'その他'
+}
 ])
+
+Client.create!(
+	email: 'test@test.com',
+	shop_name: 'test',
+    shop_name_kana: 'テスト',
+    first_name: '太郎',
+    last_name: 'テスト',
+    first_name_kana: 'テスト',
+    last_name_kana: 'テスト',
+    postal_code: '123456',
+    address: '東京都',
+    telephone_number: '09090909090',
+    encrypted_password: '123456'
+    )

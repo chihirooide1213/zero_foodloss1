@@ -23,11 +23,10 @@ Rails.application.routes.draw do
     get 'sites/new'
     post 'sites/create'
     resources :items, only: [:index]
+    resources :genres,only:[:index, :create, :edit, :update]
   end
 
   namespace :clients do
-    get 'genres/index'
-    resources :genres, only: [:create, :edit, :update]
     get 'items/index'
     get 'items/new'
     get 'items/top'
@@ -44,7 +43,14 @@ Rails.application.routes.draw do
     get 'orders/confirm'
     resources :items, only: [:index, :show]
     resources :orders, only: [:new, :index, :create, :show]
+    resources :posts, only: [:index, :create, :edit, :destroy,:update]
+    get 'posts/new/:id',to:'posts#new',as:'new'
+    resources :customer, only: [:index, :destroy, :create, :edit, :update]
+    resources :addresses, only:[:index, :edit, :update, :destroy, :create]
   end
+
+  # get 'review/:id',to:'orders#review',as:'review'
+  # post 'review/:id',to:'posts#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,37 +1,39 @@
-<h1>Clients::Items#index</h1>
-	<%= link_to "商品を追加する", clients_items_new_path %>
-	<table class="table">
+<div class="container">
+	<h1>商品一覧</h1>
+		<%= link_to "商品を追加する", clients_items_new_path %>
+		<table class="table">
 
-	<tbody>
-	<% @items.each do |item| %>
-	   <tr>
-	   	<td>商品ID</td>
-	   	<td><%= item.id %></td>
-	   </tr>
+		<tbody>
+		<% @items.each do |item| %>
+		   <tr>
+		   	<td>商品ID</td>
+		   	<td><%= item.id %></td>
+		   </tr>
 
-		<tr>
-			<td>商品名</td>
-			<td><%= link_to item.name, clients_item_path(item.id) %></td>
-		</tr>
+			<tr>
+				<td>商品名</td>
+				<td><%= link_to item.name, clients_item_path(item.id) %></td>
+			</tr>
 
-		<tr>
-			<td>商品説明文</td>
-			<td><%= item.introduction %></td>
-		</tr>
-		<tr>
-			<th>商品画像</th>
-		 	<th><%= attachment_image_tag item,:item_image,:fill, 100, 100, format: "jpeg" %></th>
-		</tr>
-		<tr>
-			<th>
-				<% if item.is_active == 1 %>
-		          	<div class="badge badge-primary">販売中</div>
-		          	<% else %>
-		          	<div class="badge badge-danger">販売停止中</div>
-		          <% end %>
-		    </th>
-		 </tr>
-	<% end %>
-	</tbody>
-</table>
+			<tr>
+				<td>商品説明文</td>
+				<td><%= item.introduction %></td>
+			</tr>
+			<tr>
+				<th>商品画像</th>
+			 	<th><%= attachment_image_tag item,:item_image,:fill, 100, 100, format: "jpeg" %></th>
+			</tr>
+			<tr>
+				<th>
+					<% if item.is_active == 1 %>
+			          	<div class="badge badge-primary">販売中</div>
+			          	<% else %>
+			          	<div class="badge badge-danger">販売停止中</div>
+			          <% end %>
+			    </th>
+			 </tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>
 
