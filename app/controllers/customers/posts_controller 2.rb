@@ -1,5 +1,6 @@
 class Customers::PostsController < ApplicationController
-  
+  before_action :set_customer
+
   def create
   	@post = Post.new(post_params)
   	@post.customer_id = current_customer.id
@@ -31,6 +32,10 @@ def destroy
 	redirect_to customers_posts_path
 end
   private
+    def set_customer
+  	 @customer = current_customer
+    end
+
   	def post_params
   		params.require(:post).permit(:item_id, :content, :title, :rate)
   	end

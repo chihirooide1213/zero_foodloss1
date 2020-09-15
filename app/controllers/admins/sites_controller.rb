@@ -18,6 +18,7 @@ class Admins::SitesController < ApplicationController
   def top
   	@items = Item.all
   	@genres = Genre.all
+    @posts = Post.order(rate: "DESC").limit(3)
   end
 
   private

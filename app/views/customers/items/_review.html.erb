@@ -1,9 +1,30 @@
 <div class="container">
 	<h3>過去の口コミ</h3>
 	<div class="review">
-		<%= @posts.each do |post| %>
-		<%= post.title %>
-		<%= post.content %>
-		<% end %>
+		<table class="table">
+
+			<% posts.each do |post| %>
+			<tr>
+				<th><%= post.title %></th>
+				<th><%= post.item.name %></th>
+				<th>
+					<div id="star-rate-<%= post.id %>"></div>
+			            <script>
+			            $('#star-rate-<%= post.id %>').raty({
+			              size: 36,
+			              starOff:  '<%= asset_path('star-off.png') %>',
+			              starOn : '<%= asset_path('star-on.png') %>',
+			              starHalf: '<%= asset_path('star-half.png') %>',
+			              half: true,
+			              readOnly: true,
+			              score: <%= post.rate %>,
+			            });
+			            </script>
+				</th>
+				<th><%= attachment_image_tag post.item,:item_image,:fill, 100, 100, format: "jpeg" %></th>
+				<th><%= post.content %></th>
+			</tr>
+			<% end %>
+		</table>
 	</div>
 </div>
