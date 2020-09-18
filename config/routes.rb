@@ -45,7 +45,7 @@ Rails.application.routes.draw do
     resources :orders, only: [:new, :index, :create, :show]
     resources :posts, only: [:index, :create, :edit, :destroy,:update]
     get 'posts/new/:id',to:'posts#new',as:'new'
-    resources :customer, only: [:index, :destroy, :create, :edit, :update]
+    resources :customer, only: [:index, :create, :edit, :update]
     resources :addresses, only:[:index, :edit, :update, :destroy, :create]
   end
 

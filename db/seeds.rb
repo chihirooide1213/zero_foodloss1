@@ -43,5 +43,5 @@ Client.create!(
     postal_code: '123456',
     address: '東京都',
     telephone_number: '09090909090',
-    encrypted_password: '123456'
+    password: '123456'
     )
