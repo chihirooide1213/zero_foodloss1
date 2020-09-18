@@ -6,18 +6,10 @@
 		<% @items.each do |item| %>
 			<tr>
 				<th>商品名</th>
-				<td>
-					<%= link_to item.name, customers_item_path(item) %>
-				</td>
-			</tr>
-			<tr>
-				<th><%= attachment_image_tag item,:item_image,:fill, 100, 100, format: "jpeg" %></th>
-			</tr>
-			<tr>
+				<td><%= link_to item.name, customers_item_path(item) %></td>
+				<th><%= attachment_image_tag item,:item_image,:fill, 200, 200, format: "jpeg" %></th>
 				<th>商品説明文</th>
 				<td><%= item.introduction %></td>
-			</tr>
-			<tr>
 				<th>価格</th>
 				<td><%= item.price %>円</td>
 			</tr>
