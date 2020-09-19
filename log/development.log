@@ -48035,3 +48035,69 @@ DEPRECATION WARNING: Dangerous query method (method whose arguments are used as 
 Completed 200 OK in 29064ms (Views: 27498.7ms | ActiveRecord: 189.5ms)
 
 
+Started GET "/admins/sites/top" for 10.0.2.2 at 2020-09-18 06:47:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Admins::SitesController#top as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "avg(posts.rate) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from top at /home/vagrant/work/zero_foodloss1/app/controllers/admins/sites_controller.rb:26)
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "item_id,avg(posts.rate)". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from top at /home/vagrant/work/zero_foodloss1/app/controllers/admins/sites_controller.rb:26)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT  item_id,avg(posts.rate) FROM "posts" WHERE "posts"."created_at" BETWEEN ? AND ? GROUP BY "posts"."item_id" ORDER BY avg(posts.rate) desc LIMIT ?[0m  [["created_at", "2020-09-01 00:00:00"], ["created_at", "2020-09-30 23:59:59.999999"], ["LIMIT", 3]]
+  ↳ app/controllers/admins/sites_controller.rb:26
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/admins/sites_controller.rb:29
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/admins/sites_controller.rb:29
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admins/sites_controller.rb:29
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "avg(posts.rate) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from top at /home/vagrant/work/zero_foodloss1/app/controllers/admins/sites_controller.rb:34)
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "item_id,avg(posts.rate)". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from top at /home/vagrant/work/zero_foodloss1/app/controllers/admins/sites_controller.rb:34)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT  item_id,avg(posts.rate) FROM "posts" WHERE "posts"."created_at" BETWEEN ? AND ? GROUP BY "posts"."item_id" ORDER BY avg(posts.rate) desc LIMIT ?[0m  [["created_at", "2020-09-14 00:00:00"], ["created_at", "2020-09-20 23:59:59.999999"], ["LIMIT", 3]]
+  ↳ app/controllers/admins/sites_controller.rb:34
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/admins/sites_controller.rb:37
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/admins/sites_controller.rb:37
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/admins/sites_controller.rb:37
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "avg(posts.rate) desc". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from top at /home/vagrant/work/zero_foodloss1/app/controllers/admins/sites_controller.rb:41)
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "item_id,avg(posts.rate)". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from top at /home/vagrant/work/zero_foodloss1/app/controllers/admins/sites_controller.rb:41)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT  item_id,avg(posts.rate) FROM "posts" WHERE "posts"."created_at" BETWEEN ? AND ? GROUP BY "posts"."item_id" ORDER BY avg(posts.rate) desc LIMIT ?[0m  [["created_at", "2020-09-18 00:00:00"], ["created_at", "2020-09-18 23:59:59.999999"], ["LIMIT", 3]]
+  ↳ app/controllers/admins/sites_controller.rb:41
+  Rendering admins/sites/top.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admins/sites/top.html.erb:14
+  [1m[36mClient Load (0.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/sites/top.html.erb:20
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/sites/top.html.erb:20
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/sites/top.html.erb:20
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/sites/top.html.erb:20
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/sites/top.html.erb:20
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/sites/top.html.erb:20
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/sites/top.html.erb:20
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins/sites/top.html.erb:20
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admins/sites/top.html.erb:20
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admins/sites/top.html.erb:20
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admins/sites/top.html.erb:20
+  [1m[36mGenre Load (0.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admins/sites/_search.html.erb:8
+  Rendered admins/sites/_search.html.erb (16.8ms)
+  Rendered admins/sites/_monthly_ranking.html.erb (947.5ms)
+  Rendered admins/sites/_weekly_ranking.html.erb (4.5ms)
+  Rendered admins/sites/_daily_ranking.html.erb (0.6ms)
+  Rendered admins/sites/top.html.erb within layouts/application (1032.7ms)
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 1483ms (Views: 1413.5ms | ActiveRecord: 16.6ms)
+
+
