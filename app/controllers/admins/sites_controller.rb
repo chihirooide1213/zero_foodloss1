@@ -45,15 +45,15 @@ class Admins::SitesController < ApplicationController
         average:r[1]
       }
     end
-    #　 Post.ranking("月間の条件")
-    #　 Post.ranking("習慣の条件")
+    #　Post.ranking("月間の条件")
+    #　Post.ranking("習慣の条件")
     #  Post.ranking("")
+    #  ratyの特性上、同じカラムは同じページ内では情報取得ができないため_with_indexでsites_top上で
+    #  ランキングを配列で1〜9番目を表示出来るようにしている（index ＋3や＋６をする事で0〜２の次を表示できるようにしている）
   end
 
   private
     def item_params
         params.require(:item).permit(:name, :item_image, :introduction, :genre_id, :price, :is_active)
     end
-    #@post = Post.average(:rate)
-    #@posts = @post.order(rate: "DESC")
 end
