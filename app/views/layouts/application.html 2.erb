@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ZeroFoodloss1</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+<div class="container">
+  <body>
+    <% if client_signed_in? %>
+          <div class="client_link col-lg-9 col-md-9 col-xs-9">
+            <div class="client_login d-flex justify-content-end">
+              <%= link_to admins_sites_top_path do %>
+                    <i class="fas fa-store"></i>サイトTOP
+                <% end %>
+              <%= link_to clients_items_index_path(genre_sort: 0)do %>
+              <i class="fas fa-gift"></i>商品一覧・登録
+              <% end %>
+              <%= link_to clients_orders_path do %>
+              <i class="fas fa-cart-plus"></i>注文一覧
+              <% end %>
+              <%= link_to destroy_client_session_path, method: :delete do %>
+              <i class="fas fa-sign-out-alt"></i>ログアウト
+                <% end %>
+            </div>
+          </div>
+        <% elsif customer_signed_in? %>
+              <div class="welcom-message col-lg-4 col-md-4 col-xs-4">
+                <p>ようこそ　<%= current_customer.last_name + current_customer.first_name %>　さん！</p>
+              </div>
+              <div class="customer_login col-lg- col-md-6 col-xs-6">
+                <%= link_to admins_sites_top_path do %>
+                    <i class="fas fa-store"></i>サイトTOP
+                <% end %>
+                <%= link_to customers_customer_index_path(current_customer) do %>
+                  <i class="fas fa-user"></i>マイページ
+                <% end %>
+                <%= link_to customers_items_path(genre_sort: 0) do %>
+                  <i class="fas fa-gift"></i>商品一覧
+                <% end %>
+                <%= link_to customers_cart_items_path do %>
+                  <i class="fas fa-cart-plus"></i>カート
+                <% end %>
+                <%= link_to destroy_customer_session_path, method: :delete do %>
+                  <i class="fas fa-sign-out-alt"></i>ログアウト
+                <% end %>
+              </div>
+
+          <% else %>
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+            <div class="after_login col-lg-5 col-md-5 col-xs-5">
+                <%= link_to admins_sites_top_path do %>
+                    <i class="fas fa-store"></i>About
+                <% end %>
+                <%= link_to customers_items_path(genre_sort: 0) do %>
+                    <i class="fas fa-gift"></i>商品一覧
+                <% end %>
+                <%= link_to new_customer_registration_path do%>
+                  <i class="fas fa-user-plus"></i>新規登録
+                <% end %>
+                <%= link_to new_customer_session_path do %>
+                  <i class="fas fa-sign-in-alt"></i>ログイン
+                <% end %>
+            </div>
+          <% end %>
+
+    <%= yield %>
+  </body>
+</div>
+</html>
+

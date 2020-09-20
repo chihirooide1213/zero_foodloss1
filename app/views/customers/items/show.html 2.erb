@@ -1,0 +1,43 @@
+<div class="container">
+<h1>商品詳細</h1>
+
+	<div class="row">
+		<div class="col-xs-7 col-md-7 col-lg-7 col-xl-7">
+			<table class="table">
+				<tbody>
+						<tr>
+							<th>商品名</th>
+						    <th><%= @item.name %></th>
+						</tr>
+				        <tr>
+				        	<th>価格</th>
+							<th><%= @item.price %></th>
+						</tr>
+						<tr>
+							<th>商品説明</th>
+							<th><%= @item.introduction %></th>
+						</tr>
+						<tr>
+							<th>商品画像</th>
+							<th><%= attachment_image_tag @item,:item_image,:fill, 200, 200, format: "jpeg" %></th>
+						</tr>
+						<tr>
+							<th>ジャンル名</th>
+							<th><%= @genre.name %></th>
+						</tr>
+				</tbody>
+			</table>
+
+			<%= form_with model: @cart_items, url: customers_cart_items_path, local: true do |f| %>
+				<%= f.hidden_field :item_id, :value => @item.id %>
+				<div class="select">
+					<%= f.select :amount,(1..9), {prompt: "個数選択"} %>
+				</div>
+				<%= f.submit "カートに追加する" %>
+			<% end %>
+		</div>
+		<div class="col-xs-5 col-md-5 col-lg-5 col-xl-5">
+			<%= render "customers/items/review", posts: @posts %>
+		</div>
+</div>
+</div>

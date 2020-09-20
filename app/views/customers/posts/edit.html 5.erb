@@ -1,0 +1,23 @@
+<div class="container">
+	<h2>口コミ編集</h2>
+	<%= form_with model:@post,local: :true, url:customers_post_path(@post), html: { method: :put } do |f| %>
+		<%= f.label :タイトル %>
+		<%= f.text_field :title %>
+		<%= f.label :本文 %>
+		<%= f.text_field :content %>
+
+		<div id="star-rate-<%= @post.id %>"></div>
+	            <script>
+	            $('#star-rate-<%= @post.id %>').raty({
+	              size: 36,
+	              starOff:  '<%= asset_path('star-off.png') %>',
+	              starOn : '<%= asset_path('star-on.png') %>',
+	              starHalf: '<%= asset_path('star-half.png') %>',
+	              half: true,
+	              readOnly: true,
+	              score: <%= @post.rate %>,
+	            });
+	            </script>
+		<%= f.submit '更新する' %>
+	<% end %>
+</div>
