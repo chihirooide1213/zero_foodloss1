@@ -10,7 +10,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-<div class="container">
+<div id="header" class="container">
   <body>
     <% if client_signed_in? %>
           <div class="client_link col-lg-9 col-md-9 col-xs-9">
@@ -18,7 +18,7 @@
               <%= link_to admins_sites_top_path do %>
                     <i class="fas fa-store"></i>サイトTOP
                 <% end %>
-              <%= link_to clients_items_index_path(genre_sort: 0)do %>
+              <%= link_to clients_items_index_path do %>
               <i class="fas fa-gift"></i>商品一覧・登録
               <% end %>
               <%= link_to clients_orders_path do %>
@@ -40,7 +40,7 @@
                 <%= link_to customers_customer_index_path(current_customer) do %>
                   <i class="fas fa-user"></i>マイページ
                 <% end %>
-                <%= link_to customers_items_path(genre_sort: 0) do %>
+                <%= link_to customers_items_path do %>
                   <i class="fas fa-gift"></i>商品一覧
                 <% end %>
                 <%= link_to customers_cart_items_path do %>
@@ -57,7 +57,7 @@
                 <%= link_to admins_sites_top_path do %>
                     <i class="fas fa-store"></i>About
                 <% end %>
-                <%= link_to customers_items_path(genre_sort: 0) do %>
+                <%= link_to customers_items_path do %>
                     <i class="fas fa-gift"></i>商品一覧
                 <% end %>
                 <%= link_to new_customer_registration_path do%>

@@ -19,7 +19,7 @@
 						</tr>
 						<tr>
 							<th>商品画像</th>
-							<th><%= attachment_image_tag @item,:item_image,:fill, 200, 200, format: "jpeg" %></th>
+							<th><%= attachment_image_tag @item,:item_image,:fill, 180, 180, format: "jpeg" %></th>
 						</tr>
 						<tr>
 							<th>ジャンル名</th>
@@ -35,9 +35,6 @@
 				</div>
 				<%= f.submit "カートに追加する" %>
 			<% end %>
-		</div>
-		<div class="col-xs-5 col-md-5 col-lg-5 col-xl-5">
-			<%= render "customers/items/review", posts: @posts %>
 		</div>
 </div>
 </div>

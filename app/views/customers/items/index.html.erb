@@ -5,7 +5,7 @@
 				 <% @items.each do |item| %>
 				 <div class="item-box-child">
 					<div class="item-image">
-						<%= attachment_image_tag item, :item_image,:fill, 200, 200, format: "jpeg" %>
+						<%= attachment_image_tag item, :item_image,:fill, 180, 180, format: "jpeg" %>
 					</div>
 					<div class="client-shop">
 						店名:<%= item.client.shop_name %>
