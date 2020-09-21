@@ -14,7 +14,6 @@ class Customers::ItemsController < ApplicationController
   	@genre = Genre.find(@item.genre_id)
   	@cart_items = CartItem.new
    	@posts = @item.posts
-
   end
 
   private
