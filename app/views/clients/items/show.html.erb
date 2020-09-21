@@ -16,7 +16,7 @@
 					</tr>
 					<tr>
 						<th>商品画像</th>
-						<th><%= attachment_image_tag @item,:item_image, format: "jpeg" %></th>
+						<th><%= attachment_image_tag @item,:item_image, :fill, 200, 200 ,format: "jpeg" %></th>
 					</tr>
 					<tr>
 						<th>ジャンル名</th>
