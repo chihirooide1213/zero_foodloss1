@@ -16,8 +16,7 @@ Rails.application.routes.draw do
         registrations: 'customers/registrations'
     }
 
-
-
+  root to:'admins/sites#top'
   namespace :admins do
     get 'sites/top'
     get 'sites/new'
