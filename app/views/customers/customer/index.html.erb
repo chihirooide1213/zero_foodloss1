@@ -40,9 +40,11 @@
   <h4>お気に入り商品</h4>
     <div id="favorite-box" class="row">
       <% @favorites.each do |favorite| %>
-        <div><%= attachment_image_tag favorite.item, :item_image,:fill, 100, 100, format: "jpeg" %></div>
+        <div id="favorite">
+          <%= attachment_image_tag favorite.item, :item_image,:fill, 200, 200, format: "jpeg" %>
         <div><%= link_to favorite.item.name, customers_item_path(favorite.item) %></div>
         <div><%= favorite.item.price %>円</div>
+        </div>
       <% end %>
     </div>
     <h4>配送先・注文履歴</h4>

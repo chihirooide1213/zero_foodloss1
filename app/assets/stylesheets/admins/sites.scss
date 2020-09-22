@@ -5,9 +5,11 @@
 .item-box{
 	display: flex;
 	flex-wrap : wrap;
-	background-color: lightyellow;
 }
 
+.client-shop{
+	text-align: center;
+}
 div>.item-box{
 	flex: 5;
 }
@@ -15,9 +17,25 @@ div>.item-box{
 div>.item-box-child{
 	padding-top: 10px;
 	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: solid;
+	border-color: #EEEEEE;
 }
 
 .item-introduction{
 	width: 100px;
 }
 
+.search-boxes{
+	margin-bottom: 10px;
+}
+
+.search-box{
+	display: flex;
+}
+
+.search{
+	margin-right: 5px;
+}

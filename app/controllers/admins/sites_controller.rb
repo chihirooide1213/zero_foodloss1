@@ -50,6 +50,11 @@ class Admins::SitesController < ApplicationController
     #  Post.ranking("")
     #  ratyの特性上、同じカラムは同じページ内では情報取得ができないため_with_indexでsites_top上で
     #  ランキングを配列で1〜9番目を表示出来るようにしている（index ＋3や＋６をする事で0〜２の次を表示できるようにしている）
+    if params[:name].present?
+      @search_items = Item.where('name Like ?', "%#{params[:name]}%")
+    else
+      @search_items = Item.none
+    end
   end
 
   private
