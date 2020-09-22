@@ -26,14 +26,16 @@ Rails.application.routes.draw do
   end
 
   namespace :clients do
-    get 'items/index'
-    get 'items/new'
-    get 'items/top'
-    resources :items, only: [:create,:show,:update,:edit]
     resources :orders,only: [:index, :show]
     get 'cart_items/index'
     get 'order_details/index'
     get 'customers/index'
+    get 'items/index'
+    get 'items/new'
+    get 'items/top'
+    resources :items, only: [:create,:show,:update,:edit] do
+      resource :favorites, only: [:create, :destroy]
+    end
   end
 
   namespace :customers do

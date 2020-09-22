@@ -1,6 +1,7 @@
 class Customers::CustomerController < ApplicationController
   def index
   	@customer = current_customer
+    @favorites = @customer.favorites
   end
 
 
