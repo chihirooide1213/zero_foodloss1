@@ -1,11 +1,11 @@
 
 <div class="container">
 	<h1>商品一覧</h1>
-			<div class="item-box col-xs-7 col-md-7 col-lg-7 col-xl-7">
-				 <% @items.each do |item| %>
+		<div class="item-box col-xs-8 col-md-8 col-lg-8 col-xl-8">
+			<% @items.each do |item| %>
 				 <div class="item-box-child">
 					<div class="item-image">
-						<%= attachment_image_tag item, :item_image,:fill, 180, 180, format: "jpeg" %>
+						<%= attachment_image_tag item, :item_image,:fill, 100, 100, format: "jpeg" %>
 					</div>
 					<div class="client-shop">
 						店名:<%= item.client.shop_name %>
@@ -19,8 +19,17 @@
 					<div class="item-price">
 						<%= item.price %>円
 					</div>
-				</div>
+					<% if customer_signed_in? %>
+				    <% if item.favorited_by?(current_customer) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
+				        <div><span>お気に入り解除: </span><%=link_to item.favorites.count, clients_item_favorites_path(item.id), method: :delete %></div>
+				    <% else %>
+				        <div><span>お気に入り登録: </span><%=link_to item.favorites.count, clients_item_favorites_path(item.id), method: :post %></div>
+				    <% end %>
+				  <% else %>
+				    <div><span>お気に入り数: </span><%= item.favorites.count %></div>
 				<% end %>
+			<% end %>
 			</div>
+		</div>
 </div>
 

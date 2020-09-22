@@ -14,7 +14,7 @@
     <div class="col-lg-2"></div>
   </div>
 
-  <div class="row">
+  <div id="reg" class="row">
 
     <table class="table">
       <thead class="thead-light">
@@ -36,23 +36,21 @@
       </tr>
       </tbody>
     </table>
-    <div class="link-box">
-    <table table="table">
-      <tbody>
-        <tr>
-          <th>配送先</th>
-          <td>
-            <%= link_to "一覧を見る", customers_addresses_path,class: "btn btn-primary" %>
-          </td>
-        </tr>
-        <tr>
-          <th>注文履歴</th>
-          <td><%= link_to "一覧を見る", customers_orders_path,class: "btn btn-primary" %></td>
-        </tr>
-      </tbody>
-    </table>
   </div>
+  <h4>お気に入り商品</h4>
+    <div id="favorite-box" class="row">
+      <% @favorites.each do |favorite| %>
+        <div><%= attachment_image_tag favorite.item, :item_image,:fill, 100, 100, format: "jpeg" %></div>
+        <div><%= link_to favorite.item.name, customers_item_path(favorite.item) %></div>
+        <div><%= favorite.item.price %>円</div>
+      <% end %>
+    </div>
+    <h4>配送先・注文履歴</h4>
+    <div id="customer-box" class="row">
+          <div>配送先:
+            <%= link_to "一覧を見る", customers_addresses_path,class: "btn btn-primary" %></div>
+          <div>注文履歴:
+          <%= link_to "一覧を見る", customers_orders_path,class: "btn btn-primary" %></div>
+    </div>
 
-
-  </div>
 </div>
