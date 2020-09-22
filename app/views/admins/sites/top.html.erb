@@ -7,10 +7,11 @@
 お野菜やお肉を消費者の皆様へ直接提供できるプラットフォームとして
 当サイトを開設しました。</p>
 </div>
+<%= render "admins/sites/search_name", search_items: @search_items %>
 
 <div class="row"><h3>おすすめ商品</h3></div>
 	<div class="row">
-			<div class="item-box col-xs-7 col-md-7 col-lg-7 col-xl-7">
+			<div class="item-box col-xs-8 col-md-8 col-lg-8 col-xl-8">
 				 <% @items.each do |item| %>
 				 <div class="item-box-child">
 					<div class="item-image">
@@ -32,7 +33,7 @@
 				<% end %>
 			</div>
 
-			<div class="col-xs-5 col-md-5 col-lg-5 col-xl-5">
+			<div class="col-xs-4 col-md-4 col-lg-4 col-xl-4">
 				<%= render "admins/sites/search", genres: @genres %>
                 <div>月間ランキング</div>
 				<%= render "admins/sites/monthly_ranking",item_ranking: @monthly_ranking %>
