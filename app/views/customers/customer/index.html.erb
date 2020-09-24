@@ -15,7 +15,6 @@
   </div>
 
   <div id="reg" class="row">
-
     <table class="table">
       <thead class="thead-light">
         <tr>
@@ -42,8 +41,8 @@
       <% @favorites.each do |favorite| %>
         <div id="favorite">
           <%= attachment_image_tag favorite.item, :item_image,:fill, 200, 200, format: "jpeg" %>
-        <div><%= link_to favorite.item.name, customers_item_path(favorite.item) %></div>
-        <div><%= favorite.item.price %>円</div>
+          <div><%= link_to favorite.item.name, customers_item_path(favorite.item) %></div>
+          <div><%= favorite.item.price %>円</div>
         </div>
       <% end %>
     </div>

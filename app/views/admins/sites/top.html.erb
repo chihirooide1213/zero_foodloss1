@@ -1,5 +1,5 @@
 <div class="container">
-<h1>ようこそゼロフードロスへ！</h1>
+<h5><i class="fas fa-carrot"></i>ZERO Foodloss</h5>
 
 <div class="row">
 <p>コロナ禍によりレストラン等に出荷をされていた農家さん、畜産家さんの食品が
@@ -18,7 +18,7 @@
 						<%= attachment_image_tag item, :item_image,:fill, 180, 180, format: "jpeg" %>
 					</div>
 					<div class="client-shop">
-						店名:<%= item.client.shop_name %>
+						ショップ名:<%= item.client.shop_name %>
 					</div>
 					<div class="item-name">
 						<%= link_to item.name, customers_item_path(item) %>
@@ -27,7 +27,7 @@
 						<%= item.introduction %>
 					</div>
 					<div class="item-price">
-						<%= item.price %>円
+						価格:<%= item.price %>円
 					</div>
 				</div>
 				<% end %>
@@ -44,6 +44,6 @@
 			</div>
 	</div>
 
-<p><%= link_to "出品者の方はこちら", new_client_registration_path %></p>
-<p><%= link_to "ご購入希望の方はこちら",new_customer_registration_path %></p>
+<p><i class="fas fa-gift"></i><%= link_to "出品者の方はこちら", new_client_registration_path %></p>
+<p><i class="fas fa-shopping-cart"></i><%= link_to "ご購入希望の方はこちら",new_customer_registration_path %></p>
 </div>

@@ -6,7 +6,7 @@ class Clients::FavoritesController < ApplicationController
 	end
 
 	def destroy
-		favorite = Favorite.find_by(item_id: params[:item_id], item_id: current_customer.id)
+		favorite = Favorite.find_by(item_id: params[:item_id], customer_id: current_customer.id)
     	favorite.destroy
     	redirect_to customers_items_path
   end
