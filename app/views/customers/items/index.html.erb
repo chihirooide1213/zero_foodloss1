@@ -20,16 +20,18 @@
 						<%= item.price %>円
 					</div>
 					<% if customer_signed_in? %>
-				    <% if item.favorited_by?(current_customer) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
-				        <div><span>お気に入り解除: </span><%=link_to item.favorites.count, clients_item_favorites_path(item.id), method: :delete %></div>
-				    <% else %>
-				        <div><span>お気に入り登録: </span><%=link_to item.favorites.count, clients_item_favorites_path(item.id), method: :post %></div>
-				    <% end %>
-				  <% else %>
-				    <div><span>お気に入り数: </span><%= item.favorites.count %></div>
-				<% end %>
+						<% if item.favorited_by?(current_customer) %>
+						    <%=link_to clients_item_favorites_path(item.id), method: :delete do %>
+						        <i class="far fa-heart unlike-btn" ></i><%= item.favorites.count %>
+						    <% end %>
+						 <% else %>
+						    <%=link_to clients_item_favorites_path(item.id), method: :post do %>
+						        <i class="far fa-heart like-btn" ></i><%= item.favorites.count %>
+						     <% end %>
+						<% end %>
+					<% end %>
+				</div>
 			<% end %>
-			</div>
 		</div>
 </div>
 
