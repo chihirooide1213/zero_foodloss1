@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'inquiries/new'
+  post 'inquiries/create'
+
 	devise_for :admins, controllers: {
         sessions:      'admins/sessions',
         passwords:     'admins/passwords',
@@ -50,7 +53,6 @@ Rails.application.routes.draw do
     resources :addresses, only:[:index, :edit, :update, :destroy, :create]
 
   end
-
   # get 'review/:id',to:'orders#review',as:'review'
   # post 'review/:id',to:'posts#index'
 

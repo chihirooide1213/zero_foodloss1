@@ -1,6 +1,6 @@
 class Clients::ItemsController < ApplicationController
   def index
-  	@items = Item.where(client_id: current_client)
+  	@items = Item.where(client_id: current_client, is_active: 1)
   	client = current_client
   	if client.id != current_client.id
   		redirect_to admins_sites_top_path

@@ -1,35 +1,62 @@
 <div class="container">
-<h5><i class="fas fa-carrot"></i>ZERO Foodloss</h5>
+	<div class="row">
+	  <div class="title"><i class="fas fa-carrot"></i>ZERO Foodloss</div>
+	    <div>
+	      <div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="3" data-url="http://18.178.77.3/admins/sites/top" data-color="default" data-size="small" data-count="true" style="display: none;"></div>
+	      <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+	      <script type="text/javascript">LineIt.loadButton();</script>
+	    </div>
+	      <div>
+	        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+	        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	      </div>
+	      <div>
+	      <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Flocalhost%3A3000%2Fclient%2Fclients%2Ftop&layout=button_count&size=small&width=80&height=20&appId" width="80" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
+	      </iframe>
+	  	  </div>
+	</div>
 
 <div class="row">
-<p>コロナ禍によりレストラン等に出荷をされていた農家さん、畜産家さんの食品が
-出荷先に困っておられます。<br>
-お野菜やお肉を消費者の皆様へ直接提供できるプラットフォームとして
-当サイトを開設しました。</p>
+	<p>コロナ禍によりレストラン等に出荷をされていた農家さん、畜産家さんの食品が
+	出荷先に困っておられます。<br>
+	お野菜やお肉を消費者の皆様へ直接提供できるプラットフォームとして
+	当サイトを開設しました。</p>
 </div>
+
 <%= render "admins/sites/search_name", search_items: @search_items %>
 
 <div class="row"><h3>おすすめ商品</h3></div>
 	<div class="row">
 			<div class="item-box col-xs-8 col-md-8 col-lg-8 col-xl-8">
 				 <% @items.each do |item| %>
-				 <div class="item-box-child">
-					<div class="item-image">
-						<%= attachment_image_tag item, :item_image,:fill, 180, 180, format: "jpeg" %>
+					 <div class="item-box-child">
+						<div class="item-image">
+							<%= attachment_image_tag item, :item_image,:fill, 180, 180, format: "jpeg" %>
+						</div>
+						<div class="client-shop">
+							ショップ名:<%= item.client.shop_name %>
+						</div>
+						<div class="item-name">
+							<%= link_to item.name, customers_item_path(item) %>
+						</div>
+						<div class="item-introduction">
+							<%= item.introduction %>
+						</div>
+						<div class="item-price">
+							価格:<%= item.price %>円
+						</div>
+						<% if customer_signed_in? %>
+							<% if item.favorited_by?(current_customer) %>
+							    <%=link_to clients_item_favorites_path(item.id), method: :delete do %>
+							        <i class="far fa-heart unlove-btn" ></i><%= item.favorites.count %>
+							    <% end %>
+							 <% else %>
+							    <%=link_to clients_item_favorites_path(item.id), method: :post do %>
+							        <i class="far fa-heart love-btn" ></i><%= item.favorites.count %>
+								<% end %>
+							<% end %>
+						<% end %>
 					</div>
-					<div class="client-shop">
-						ショップ名:<%= item.client.shop_name %>
-					</div>
-					<div class="item-name">
-						<%= link_to item.name, customers_item_path(item) %>
-					</div>
-					<div class="item-introduction">
-						<%= item.introduction %>
-					</div>
-					<div class="item-price">
-						価格:<%= item.price %>円
-					</div>
-				</div>
 				<% end %>
 			</div>
 
@@ -43,7 +70,9 @@
 				<%= render "admins/sites/daily_ranking",item_ranking: @daily_ranking %>
 			</div>
 	</div>
-
-<p><i class="fas fa-gift"></i><%= link_to "出品者の方はこちら", new_client_registration_path %></p>
-<p><i class="fas fa-shopping-cart"></i><%= link_to "ご購入希望の方はこちら",new_customer_registration_path %></p>
+	<div id="App"  class="row">
+		<i class="fas fa-gift"></i><%= link_to "出品者の方はこちら", new_client_registration_path %>
+		<i class="fas fa-shopping-cart"></i><%= link_to "ご購入希望の方はこちら",new_customer_registration_path %>
+		<i class="fas fa-envelope-open-text"></i><%= link_to "お問い合わせはこちら", inquiries_new_path %>
+	</div>
 </div>

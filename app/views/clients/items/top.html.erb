@@ -1,3 +1,4 @@
 <div class="container">
 	<h1>本日の注文件数</h1>
+	<%= link_to Order.where(created_at: Time.zone.now.all_day).count, clients_orders_path %> 件
 </div>
