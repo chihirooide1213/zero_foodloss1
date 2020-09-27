@@ -4,14 +4,17 @@ class InquiriesController < ApplicationController
   end
 
   def create
-  	@cinquiry = Inquiry.new(inquiry_params)
+  	@inquiry = Inquiry.new(inquiry_params)
     if @inquiry.save
-      InquiriesController.inquiry_mail(@inquiry).deliver
+      InquiryMailer.send_mail(@inquiry).deliver
       flash[:success] = 'お問い合わせを受け付けました'
-      redirect_to root_path
+      redirect_to inquiries_thanks_path
     else
       render :new
     end
+  end
+
+  def thenks
   end
 
   private

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'inquiries/new'
   post 'inquiries/create'
+  get 'inquiries/thanks'
 
 	devise_for :admins, controllers: {
         sessions:      'admins/sessions',
