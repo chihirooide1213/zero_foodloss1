@@ -16,7 +16,7 @@ class Admins::SitesController < ApplicationController
   end
 
   def top
-  	@items = Item.all.order(created_at: :desc).limit(18)
+  	@items = Item.all.order(created_at: :desc).where(is_active: 1).limit(18)
   	@genres = Genre.all
     now = Time.current
     # ranking = Post.where.group(:item_id).order("avg(posts.rate) desc").limit(3).pluck("item_id,avg(posts.rate)")

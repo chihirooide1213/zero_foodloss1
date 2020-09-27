@@ -1,16 +1,19 @@
+<div class="container">
 <h3>新規商品登録</h3>
 
 <%= form_for(@item, url: clients_items_path) do |f| %>
-<%= f.label :商品名 %>
-<%= f.text_field :name %>
-<%= f.label :商品説明 %>
-<%= f.text_area :introduction %>
-<%= f.attachment_field :item_image %>
-<%= f.label :価格 %>
-<%= f.text_field :price %>
-<%= f.label :ジャンル名 %>
-<%= f.collection_select :genre_id, Genre.where(is_active: 1), :id, :name, include_blank: "選択して下さい" %>
-<%= f.label :販売ステータス %>
-<%= f.select:is_active, [["販売中", "1"], ["販売中止", "2"]] %>
-<%= f.submit %>
+	<%= f.label :商品名 %>
+	<%= f.text_field :name %>
+	<%= f.label :商品説明 %>
+	<%= f.text_field :introduction %>
+	<%= f.attachment_field :item_image %>
+	<%= f.label :価格 %>
+	<%= f.text_field :price %><br>
+	<%= f.label :ジャンル名 %>
+	<%= f.collection_select :genre_id, Genre.where(is_active: 1), :id, :name, include_blank: "選択して下さい" %>
+	<%= f.label :販売ステータス %>
+	<%= f.select:is_active, [["販売中", "1"], ["販売中止", "2"]] %>
+	<%= f.submit %>
 <% end %>
+
+</div>

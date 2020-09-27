@@ -1,0 +1,17 @@
+<div class="container">
+	<%= form_with model:@inquiry,url:inquiries_new_path, method: :get do |f| %>
+
+	  <div class="form-group">
+	    <%= f.label :mail, '返信先メールアドレス' %>
+	    <%= f.text_field :mail, class: 'form-control' %>
+	  </div>
+
+	 <div class="form-group">
+	   <%= f.label :message, 'お問い合わせ内容' %>
+	   <%= f.text_area :message, size: '10x10', class: 'form-control' %>
+	 </div>
+
+	  <%= f.submit '送信' %>
+
+	<% end %>
+</div>
