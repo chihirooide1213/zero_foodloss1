@@ -1,7 +1,5 @@
 <div class="container">
-	<%= form_with model:@inquiry,
-
-	 url:inquiries_new_path do |f| %>
+	<%= form_with model:@inquiry,url:inquiries_new_path, method: :get do |f| %>
 
 	  <div class="form-group">
 	    <%= f.label :mail, '返信先メールアドレス' %>

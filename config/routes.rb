@@ -51,7 +51,10 @@ Rails.application.routes.draw do
     get 'posts/new/:id',to:'posts#new',as:'new'
     resources :customer, only: [:index, :create, :edit, :update]
     resources :addresses, only:[:index, :edit, :update, :destroy, :create]
+  end
 
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: '/letter_opener'
   end
   # get 'review/:id',to:'orders#review',as:'review'
   # post 'review/:id',to:'posts#index'

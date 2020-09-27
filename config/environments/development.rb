@@ -66,7 +66,7 @@ port:                  587,
 domain:               'gmail.com',
 user_name:            'donnakachi@gmail.com',
 password:             'pntqttnrupuomlvr',
-authentication:       'plain',
+authentication:       'login',
 enable_starttls_auto:  true
 }
 end
