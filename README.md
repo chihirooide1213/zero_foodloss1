@@ -19,7 +19,6 @@
 ### 主な利用シーン
 ・食品購入のタイミング（郵送対応）
 
-## 設計書
 
 ### 機能一覧
 https://docs.google.com/spreadsheets/d/1J1IdXQruI17gcLzsdMVUqnWxPvELRqFwLguDS54ybpY/edit?usp=sharing
