@@ -2,7 +2,7 @@ class Customers::ItemsController < ApplicationController
 
   def index
   	if  params[:genre_id]
-  		@genre = Genre.find(params[:genre_id]).where(is_active: 1)
+  		@genre = Genre.find(params[:genre_id])
   		@items = @genre.items
   	else
   	   @items = Item.where(is_active: 1)
