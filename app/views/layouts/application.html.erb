@@ -52,8 +52,8 @@
                     </div>
 
               <% else %>
-                    <div class="col-lg-4 col-md-4 col-xs-4"></div>
-                      <div class="after_login col-lg-5 col-md-5 col-xs-5">
+                    <div class="col-lg-6 col-md-6 col-xs-6"></div>
+                      <div class="login col-lg-7 col-md-7 col-xs-7">
                           <%= link_to admins_sites_top_path do %>
                               <i class="fas fa-store"></i>About
                           <% end %>
@@ -61,7 +61,10 @@
                               <i class="fas fa-gift"></i>商品一覧
                           <% end %>
                           <%= link_to new_customer_registration_path do%>
-                            <i class="fas fa-user-plus"></i>新規登録
+                            <i class="fas fa-user-plus"></i>ご購入希望の方専用・新規登録
+                          <% end %>
+                          <%= link_to new_client_registration_path do %>
+                          <i class="fas fa-gift"></i>出品者の方専用・新規登録
                           <% end %>
                           <%= link_to new_customer_session_path do %>
                             <i class="fas fa-sign-in-alt"></i>ログイン
