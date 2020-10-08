@@ -34,7 +34,7 @@
 							<%= attachment_image_tag item, :item_image,:fill, 180, 180, format: "jpeg" %>
 						</div>
 						<div class="client-shop">
-							ショップ名:<%= item.client.shop_name %>
+							ショップ名:<%= link_to item.client.shop_name, admins_path(item.client) %>
 						</div>
 						<div class="item-name">
 							<%= link_to item.name, customers_item_path(item) %>

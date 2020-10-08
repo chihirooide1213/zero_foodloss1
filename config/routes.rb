@@ -25,6 +25,7 @@ Rails.application.routes.draw do
     get 'sites/top'
     get 'sites/new'
     post 'sites/create'
+    get 'sites/shop/:id',to:'sites#shop'
     resources :items, only: [:index]
     resources :genres,only:[:index, :create, :edit, :update]
   end

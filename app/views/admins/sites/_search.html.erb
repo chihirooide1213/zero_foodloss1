@@ -6,15 +6,15 @@
     </thead>
     <tbody class="overflow-auto">
       <% @genres.each do |genre| %>
-      <tr>
-        <td>
-          <%= link_to customers_items_path(genre_id: genre.id) do %>
-          <div class="genre_color">
-          <%= genre.name %>
-          </div>
-          <% end %>
-        </td>
-      </tr>
+        <tr>
+          <td>
+            <%= link_to customers_items_path(genre_id: genre.id) do %>
+            <div class="genre_color">
+            <%= genre.name %>
+            </div>
+            <% end %>
+          </td>
+        </tr>
       <% end %>
     </tbody>
   </table>
