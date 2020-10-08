@@ -57,8 +57,13 @@ class Admins::SitesController < ApplicationController
     end
   end
 
+  def shop
+    @client = Client.find(params[:id])
+    @items = @client.items.all
+  end
+
   private
     def item_params
-        params.require(:item).permit(:name, :item_image, :introduction, :genre_id, :price, :is_active)
+        params.require(:item).permit(:name, :item_image, :introduction, :genre_id, :price, :is_active, :client_id)
     end
 end
