@@ -1,19 +1,19 @@
 <div class="container">
 	<div class="shopname">■<%= @client.shop_name %>/商品一覧</div>
 		<div class="row">
-				<% @items.each do |item| %>
-					<div class="shop-box col-xs-8 col-md-8 col-lg-8 col-xl-8">
-						<%= attachment_image_tag item, :item_image,:fill, 180, 180, format: "jpeg" %>
-						<div class="shop_item">
-							商品名：<%= link_to item.name, customers_item_path(item) %>
-						</div>
-						<div class="shop_intr">
-							商品説明：<%= item.introduction %>
-						</div>
-						<div class="shop_price">
-							価格：<%= item.price %>
-						</div>
+			<% @items.each do |item| %>
+				<div class="shop-box col-xs-8 col-md-8 col-lg-8 col-xl-8">
+					<%= attachment_image_tag item, :item_image,:fill, 180, 180, format: "jpeg" %>
+					<div class="shop_item">
+						商品名：<%= link_to item.name, customers_item_path(item) %>
 					</div>
-				<% end %>
+					<div class="shop_intr">
+						商品説明：<%= item.introduction %>
+					</div>
+					<div class="shop_price">
+						価格：<%= item.price %>
+					</div>
+				</div>
+			<% end %>
 		</div>
 </div>
