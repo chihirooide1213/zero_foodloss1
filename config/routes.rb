@@ -52,7 +52,7 @@ Rails.application.routes.draw do
     resources :customer, only: [:index, :create, :edit, :update]
     resources :addresses, only:[:index, :edit, :update, :destroy, :create]
     resources :cart_items, only: [:index, :create, :destroy, :update]
-    delete 'cart_items/destroy_all'
+    delete 'cart_items/destroy_all/:id', to:'cart_items#destroy_all',as:"destroy_all"
   end
 
   if Rails.env.development?
