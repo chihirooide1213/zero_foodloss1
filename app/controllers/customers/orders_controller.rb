@@ -49,9 +49,6 @@
 		      end
 		      @order.save!
 
-		      # メール送信機能
-		      # SampleMailer.send_when_purchase(@order).deliver
-
 		      # cart_productsの内容をorder_productsに新規登録
 		      current_customer.cart_items.each do |ci|
 		      	order_details              = @order.order_details.build
@@ -71,7 +68,6 @@
 		  end
 		end
 
-
 		def thanks
 		end
 
@@ -79,7 +75,7 @@
 			current_customer_cart = current_customer.cart_items
 			if current_customer_cart.blank?
 				flash[:danger] = 'カートが空です。'
-				redirect_to customer_cart_items_path(current_customer)
+				redirect_to customers_cart_items_path(current_customer)
 			else
 				@order = Order.new
 			end
@@ -135,9 +131,7 @@
 			@order = Order.find(params[:id])
 		end
 
-
 		private
-
 		def set_customer
 			@customer = current_customer
 		end

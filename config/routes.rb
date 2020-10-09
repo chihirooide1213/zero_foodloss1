@@ -44,8 +44,6 @@ Rails.application.routes.draw do
   end
 
   namespace :customers do
-    resources :cart_items, only: [:index, :create, :destroy, :update]
-    delete 'cart_items/destroy_all'
     get 'orders/confirm'
     resources :items, only: [:index, :show]
     resources :orders, only: [:new, :index, :create, :show]
@@ -53,6 +51,8 @@ Rails.application.routes.draw do
     get 'posts/new/:id',to:'posts#new',as:'new'
     resources :customer, only: [:index, :create, :edit, :update]
     resources :addresses, only:[:index, :edit, :update, :destroy, :create]
+    resources :cart_items, only: [:index, :create, :destroy, :update]
+    delete 'cart_items/destroy_all/:id', to:'cart_items#destroy_all',as:"destroy_all"
   end
 
   if Rails.env.development?

@@ -1,33 +1,33 @@
 <table class="table">
-				<thead>
-					<tr>
-						<th>商品名</th>
-						<th>単価(税)</th>
-						<th>数量</th>
-						<th></th>
-						<th>小計</th>
-						<th></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<% @total_bill = 0 %>
-						<% cart_items.each do |cart_item| %>
-
-						<td><%= cart_item.item.name %></td>
-						<td><%= cart_item.item.price %>円</td>
-						<td><%= cart_item.amount %></td>
-
-                        <td>
-						<%= form_with model: cart_item, url: customers_cart_item_path(cart_item) do |f| %>
-						<%= f.select :count,(1..9) %>
-							<%= f.submit "変更する"%>
-							<% end %>
-						</td>
-						<td>
-							<%= link_to "削除する", customers_cart_item_path(cart_item.id), method: :delete, class: "btn btn-primary" %></td>
+	<thead>
+		<tr>
+			<th>商品名</th>
+			<th>単価(税)</th>
+			<th>数量</th>
+			<th></th>
+			<th>小計</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<% @total_bill = 0 %>
+				<% cart_items.each do |cart_item| %>
+					<td><%= cart_item.item.name %></td>
+					<td><%= cart_item.item.price %>円</td>
+					<td><%= cart_item.amount %></td>
+                    <td>
+						<%= form_with model: cart_item, url: customers_cart_item_path(cart_item), local: true do |f| %>
+							<%= f.select :amount,(1..9) %>
+							<%= f.submit "変更する" %>
+						<% end %>
+					</td>
+					<td><%= cart_item.amount * cart_item.item.price %></td>
+					<td>
+						<%= link_to "削除する", customers_cart_item_path(cart_item.id), method: :delete, class: "btn btn-primary" %>
+					</td>
 						<td></td>
 					</tr>
-					<% end %>
-				</tbody>
-			</table>
+				<% end %>
+	</tbody>
+</table>
