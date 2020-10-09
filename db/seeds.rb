@@ -20,3 +20,15 @@ Client.create!(
     telephone_number: '09090909090',
     password: '123456'
     )
+
+Customer.create!(
+    email: '1@gmail.com',
+    first_name: '太郎',
+    last_name: 'テスト',
+    first_name_kana: 'タロウ',
+    last_name_kana: 'テスト',
+    postal_code: '123456',
+    address: '東京都',
+    telephone_number: '09090909090',
+    password: '123456'
+    )
