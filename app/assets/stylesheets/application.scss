@@ -20,6 +20,7 @@
    min-height: 100vh;
    padding-bottom: 80px;
    box-sizing: border-box;
+   font-size: 15px;
  }
 
 header{
@@ -31,6 +32,9 @@ header{
 
  a{
  	color: #666666;
+ }
+
+ .client_login{
  }
 
 
@@ -45,5 +49,6 @@ header{
    div{
      text-align: center;
      line-height: 80px;
+     font-size: 15px;
    }
  }
