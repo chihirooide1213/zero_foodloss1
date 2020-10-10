@@ -7,6 +7,10 @@
 	flex-wrap : wrap;
 }
 
+.info{
+	font-size: 15px;
+}
+
 .client-shop{
 	text-align: center;
 }
@@ -16,6 +20,7 @@ div>.item-box{
 
 div>.item-box-child{
 	padding-top: 10px;
+	font-size: 15px;
 	width: 210px;
 	height: 340px;
 	padding-left: 10px;
@@ -68,6 +73,7 @@ div>.item-box-child{
 
  #App{
  margin: 20px;
+ font-size: 15px;
  }
 
  .fa-shopping-cart{
@@ -96,4 +102,24 @@ div>.shop-box{
 	margin-bottom: 10px;
 	border: solid;
 	border-color: #EEEEEE;
+}
+
+.overflow-auto{
+	font-size: 15px;
+}
+
+.ranking{
+	font-size: 15px;
+}
+
+.fa-cart-plus{
+	margin-left:5px;
+}
+
+.fa-gift{
+	margin-left:5px;
+}
+
+.fa-sign-out-alt{
+	margin-left:5px;
 }

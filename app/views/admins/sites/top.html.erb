@@ -2,21 +2,21 @@
 	<div class="row">
 	  <div class="title"><i class="fas fa-carrot"></i>ZERO Foodloss</div>
 	    <div>
-	      <div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="3" data-url="http://18.178.77.3/admins/sites/top" data-color="default" data-size="small" data-count="true" style="display: none;"></div>
-	      <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
-	      <script type="text/javascript">LineIt.loadButton();</script>
-	    </div>
-	      <div>
 	        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
 	        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-	      </div>
-	      <div>
-	      <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Flocalhost%3A3000%2Fclient%2Fclients%2Ftop&layout=button_count&size=small&width=80&height=20&appId" width="80" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
-	      </iframe>
-	  	  </div>
+	    </div>
+	    <div>
+		    <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Flocalhost%3A3000%2Fclient%2Fclients%2Ftop&layout=button_count&size=small&width=80&height=20&appId" width="80" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
+		    </iframe>
+	    </div>
+	    <div>
+		    <div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="3" data-url="http://18.178.77.3/admins/sites/top" data-color="default" data-size="small" data-count="true" style="display: none;"></div>
+		      <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+		    <script type="text/javascript">LineIt.loadButton();</script>
+	    </div>
 	</div>
 
-<div class="row">
+<div class="info row">
 	<p>コロナ禍によりレストラン等に出荷をされていた農家さん、畜産家さんの食品が
 	出荷先に困っておられます。<br>
 	お野菜やお肉を消費者の皆様へ直接提供できるプラットフォームとして
@@ -60,7 +60,7 @@
 				<% end %>
 			</div>
 
-			<div class="col-xs-4 col-md-4 col-lg-4 col-xl-4">
+			<div class="ranking col-xs-4 col-md-4 col-lg-4 col-xl-4">
 				<%= render "admins/sites/search", genres: @genres %>
                 <div>月間ランキング</div>
 				<%= render "admins/sites/monthly_ranking",item_ranking: @monthly_ranking %>
@@ -70,6 +70,7 @@
 				<%= render "admins/sites/daily_ranking",item_ranking: @daily_ranking %>
 			</div>
 	</div>
+	<%= paginate @items %>
 	<div id="App"  class="row">
 		<i class="fas fa-gift"></i><%= link_to "出品者の方はこちら", new_client_registration_path %>
 		<i class="fas fa-shopping-cart"></i><%= link_to "ご購入希望の方はこちら",new_customer_registration_path %>
