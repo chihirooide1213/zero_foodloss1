@@ -30,9 +30,11 @@
 			<div class="item-box col-xs-8 col-md-8 col-lg-8 col-xl-8">
 				 <% @items.each do |item| %>
 					 <div class="item-box-child">
+					 	<%= link_to customers_item_path(item) do %>
 						<div class="item-image">
 							<%= attachment_image_tag item, :item_image,:fill, 180, 180, format: "jpeg" %>
 						</div>
+						<% end %>
 						<div class="client-shop">
 							ショップ名:<%= link_to item.client.shop_name, admins_path(item.client) %>
 						</div>
