@@ -2,7 +2,7 @@
 
   <% if @posts.present? %>
     <% @posts.each do |post| %>
-        <div class="review col-md-6 mb-3">
+        <div class="review col-md-3 mb-3">
             <div class="posts-content">
               <p>投稿日時：<%= simple_time(post.created_at) %></p>
               <h4 class="mb-3">評価：<%= post.rate %>点 | <%= post.title %></h4>
