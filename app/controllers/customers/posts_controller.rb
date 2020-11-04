@@ -11,7 +11,7 @@ class Customers::PostsController < ApplicationController
   end
 
   def index
-  	@posts = Post.all.order(created_at: :desc)
+  	@posts = Post.all
   end
 
   def new
